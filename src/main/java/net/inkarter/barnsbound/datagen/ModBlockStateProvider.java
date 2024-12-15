@@ -61,10 +61,10 @@ public class ModBlockStateProvider extends BlockStateProvider
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
     private void blockItem(DeferredBlock<Block> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("mccourseid:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("barnsbound:block/" + deferredBlock.getId().getPath()));
     }
     private void blockItem(DeferredBlock<Block> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("mccourseid:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("barnsbound:block/" + deferredBlock.getId().getPath() + appendix));
     }
 
 

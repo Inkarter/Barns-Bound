@@ -1,8 +1,12 @@
 package net.inkarter.barnsbound;
 
 import net.inkarter.barnsbound.block.ModBlocks;
+import net.inkarter.barnsbound.entity.ModEntities;
+import net.inkarter.barnsbound.entity.client.ChickenRenderer;
+import net.inkarter.barnsbound.entity.client.PenguinRenderer;
 import net.inkarter.barnsbound.item.ModCreativeModeTabs;
 import net.inkarter.barnsbound.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -43,6 +47,8 @@ public class BarnsBoundMod
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -94,9 +100,9 @@ public class BarnsBoundMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
+            EntityRenderers.register(ModEntities.CHICKEN_WHITE.get(), ChickenRenderer::new);
+
         }
     }
 }

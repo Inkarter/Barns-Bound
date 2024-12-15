@@ -47,10 +47,10 @@ public class ChainsawItem extends Item//ctrl + left click Item to see more
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
     {
         if(Screen.hasShiftDown())   {
-            tooltipComponents.add(Component.translatable("tooltip.mccourseid.chainsaw.tooltip.1"));
-            tooltipComponents.add(Component.translatable("tooltip.mccourseid.chainsaw.tooltip.2"));
+            tooltipComponents.add(Component.translatable("tooltip.barnsbound.chainsaw.tooltip.1"));
+            tooltipComponents.add(Component.translatable("tooltip.barnsbound.chainsaw.tooltip.2"));
         }   else {
-            tooltipComponents.add(Component.translatable("tooltip.mccourseid.chainsaw.tooltip.shift"));
+            tooltipComponents.add(Component.translatable("tooltip.barnsbound.chainsaw.tooltip.shift"));
         }
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

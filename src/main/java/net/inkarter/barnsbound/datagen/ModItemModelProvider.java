@@ -36,6 +36,9 @@ public class ModItemModelProvider extends ItemModelProvider
 
         basicItem(ModBlocks.BLACK_OPAL_DOOR.asItem());
 
+        withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.WHITE_CHICKEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
 
 
     }

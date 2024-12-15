@@ -26,7 +26,7 @@ public class ModCreativeModeTabs
 
     public static final Supplier<CreativeModeTab> BLACK_OPAL_ITEMS_TAB =
             CREATIVE_MODE_TABS.register("black_opal_items_tab", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.mccourseid.black_opal_items_tab"))
+                    .title(Component.translatable("itemGroup.barnsbound.black_opal_items_tab"))
                     .icon(() -> new ItemStack(ModItems.BLACK_OPAL.get()))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.BLACK_OPAL);
@@ -36,13 +36,16 @@ public class ModCreativeModeTabs
                         pOutput.accept(ModItems.TOMATO);
                         pOutput.accept(ModItems.FROSTFIRE_ICE);
 
+                        pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
+                        pOutput.accept(ModItems.WHITE_CHICKEN_SPAWN_EGG);
+
 
                     })
                     .build());
 
     public static final Supplier<CreativeModeTab> BLACK_OPAL_BLOCKS_TAB =
             CREATIVE_MODE_TABS.register("black_opal_blocks_tab", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.mccourseid.black_opal_blocks_tab"))
+                    .title(Component.translatable("itemGroup.barnsbound.black_opal_blocks_tab"))
                     .icon(() -> new ItemStack(ModBlocks.BLACK_OPAL_BLOCK.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(BarnsBoundMod.MOD_ID, "black_opal_items_tab"))
                     //means withTabsBefore we show the tabs that are going to be before this tab

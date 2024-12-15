@@ -1,8 +1,16 @@
 {
   "item.barnsbound.black_opal": "Black Opal",
   "item.barnsbound.raw_black_opal": "Raw Black Opal",
+  "item.barnsbound.chainsaw": "§eChainsaw§r",
+  "item.barnsbound.tomato": "Tomato",
+  "item.barnsbound.frostfire_ice": "Frostfire Ice",
+
+  "item.barnsbound.penguin_spawn_egg": "Penguin Spawn Egg",
+  "item.barnsbound.white_chicken_spawn_egg": "White Chicken Spawn Egg",
+
   "itemGroup.barnsbound.black_opal_items_tab": "Black Opal Items",
   "itemGroup.barnsbound.black_opal_blocks_tab": "Black Opal Blocks",
+
   "block.barnsbound.black_opal_block": "Block of Black Opal",
   "block.barnsbound.raw_black_opal_block": "Raw Black Opal Block",
   "block.barnsbound.black_opal_ore": "Black Opal Ore",
@@ -20,9 +28,7 @@
   "block.barnsbound.black_opal_trapdoor": "Black Opal Trapdoor",
 
 
-  "item.barnsbound.chainsaw": "§eChainsaw§r",
-  "item.barnsbound.tomato": "Tomato",
-  "item.barnsbound.frostfire_ice": "Frostfire Ice",
+
 
   "tooltip.barnsbound.tomato.1": "TomAto or TomatO?",
 
