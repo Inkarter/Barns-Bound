@@ -1,0 +1,35 @@
+{
+  "item.barnsbound.black_opal": "Black Opal",
+  "item.barnsbound.raw_black_opal": "Raw Black Opal",
+  "itemGroup.barnsbound.black_opal_items_tab": "Black Opal Items",
+  "itemGroup.barnsbound.black_opal_blocks_tab": "Black Opal Blocks",
+  "block.barnsbound.black_opal_block": "Block of Black Opal",
+  "block.barnsbound.raw_black_opal_block": "Raw Black Opal Block",
+  "block.barnsbound.black_opal_ore": "Black Opal Ore",
+  "block.barnsbound.black_opal_deepslate_ore": "Black Opal Deepslate Ore",
+  "block.barnsbound.black_opal_end_ore": "Black Opal End Ore",
+  "block.barnsbound.black_opal_nether_ore": "Black Opal Nether Ore",
+
+  "block.barnsbound.black_opal_stairs": "Black Opal Stairs",
+  "block.barnsbound.black_opal_slab": "Black Opal Slab",
+  "block.barnsbound.black_opal_pressure_plate": "Black Opal Pressure Plate",
+  "block.barnsbound.black_opal_fence": "Black Opal Fence",
+  "block.barnsbound.black_opal_fence_gate": "Black Opal Fence Gate",
+  "block.barnsbound.black_opal_wall": "Black Opal Wall",
+  "block.barnsbound.black_opal_door": "Black Opal Door",
+  "block.barnsbound.black_opal_trapdoor": "Black Opal Trapdoor",
+
+
+  "item.barnsbound.chainsaw": "§eChainsaw§r",
+  "item.barnsbound.tomato": "Tomato",
+  "item.barnsbound.frostfire_ice": "Frostfire Ice",
+
+  "tooltip.barnsbound.tomato.1": "TomAto or TomatO?",
+
+  "tooltip.barnsbound.chainsaw.tooltip.1": "This Chainsaw is awesome and will cut down trees!",
+  "tooltip.barnsbound.chainsaw.tooltip.2": "- §o  Chainsaw go §4vrooom!§r",
+  "tooltip.barnsbound.chainsaw.tooltip.shift": "Press §6Shift§r for more Information",
+
+  "block.barnsbound.magic_block": "Magic Block",
+  "tooltip.barnsbound.magic_block.tooltip.1": "This block is §sMAGICAL§r"
+}

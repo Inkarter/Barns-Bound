@@ -1,5 +1,9 @@
 package net.inkarter.barnsbound;
 
+import net.inkarter.barnsbound.block.ModBlocks;
+import net.inkarter.barnsbound.item.ModCreativeModeTabs;
+import net.inkarter.barnsbound.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -21,8 +25,9 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod
+@Mod(BarnsBoundMod.MOD_ID)
+public class BarnsBoundMod
+
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "barnsbound";
@@ -30,11 +35,14 @@ public class ExampleMod
     private static final Logger LOGGER = LogUtils.getLogger();
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ExampleMod(IEventBus modEventBus, ModContainer modContainer)
+    public BarnsBoundMod(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -64,7 +72,11 @@ public class ExampleMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+        }
 }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
