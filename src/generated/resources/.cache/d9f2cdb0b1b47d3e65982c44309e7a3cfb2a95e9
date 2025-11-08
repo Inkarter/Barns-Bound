@@ -1,0 +1,7 @@
+// 1.21.1	2024-12-15T01:03:58.7270886	Tags for minecraft:block mod id barnsbound
+e6ce328dfeef3edf58c6e8b4627083bca925e01d data/minecraft/tags/block/fences.json
+242d531905a21d19e25b34983a13f5699097bff0 data/minecraft/tags/block/fence_gates.json
+3698ad47dd2b5482b4f3caee434cf824f2e2975c data/minecraft/tags/block/mineable/pickaxe.json
+e25668faf39f6b612baa45e4ef4f79abb0db0516 data/minecraft/tags/block/needs_diamond_tool.json
+1d342a8eeb860df1af34d2acc19ccfe4c5e81feb data/minecraft/tags/block/needs_iron_tool.json
+bd82f00468b9d70cae3de1549b368410bbe11ec5 data/minecraft/tags/block/walls.json

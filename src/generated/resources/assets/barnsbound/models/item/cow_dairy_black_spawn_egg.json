@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_spawn_egg",
+  "textures": {
+    "layer0": "barnsbound:item/cow_dairy_black_spawn_egg"
+  }
+}

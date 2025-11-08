@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "barnsbound:block/magic_block"
+    }
+  }
+}
