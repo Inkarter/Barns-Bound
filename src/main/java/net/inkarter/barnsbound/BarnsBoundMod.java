@@ -2,7 +2,8 @@ package net.inkarter.barnsbound;
 
 import net.inkarter.barnsbound.block.ModBlocks;
 import net.inkarter.barnsbound.entity.ModEntities;
-import net.inkarter.barnsbound.entity.client.ChickenRenderer;
+import net.inkarter.barnsbound.entity.client.chicken.ChickenRenderer;
+import net.inkarter.barnsbound.entity.client.cow.CowRenderer;
 import net.inkarter.barnsbound.entity.client.PenguinRenderer;
 import net.inkarter.barnsbound.item.ModCreativeModeTabs;
 import net.inkarter.barnsbound.item.ModItems;
@@ -12,7 +13,6 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
@@ -102,6 +102,7 @@ public class BarnsBoundMod
         {
             EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
             EntityRenderers.register(ModEntities.CHICKEN_WHITE.get(), ChickenRenderer::new);
+            EntityRenderers.register(ModEntities.COW_DAIRY_BLACK.get(), CowRenderer::new);
 
         }
     }

@@ -1,19 +1,19 @@
-package net.inkarter.barnsbound.entity.client;
+package net.inkarter.barnsbound.entity.client.chicken;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.inkarter.barnsbound.BarnsBoundMod;
+import net.inkarter.barnsbound.entity.client.ModModelLayer;
 import net.inkarter.barnsbound.entity.custom.ChickenEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.event.level.block.CreateFluidSourceEvent;
 
 public class ChickenRenderer extends MobRenderer<ChickenEntity, ChickenModel>
 {
     public ChickenRenderer(EntityRendererProvider.Context context)
     {
-        super(context, new ChickenModel(context.bakeLayer(ModModelLayer.CHICKEN_WHITE)), 0.75f);
+        super(context, new ChickenModel(context.bakeLayer(ModModelLayer.CHICKEN_WHITE)), 0.4f);
     }
 
     @Override

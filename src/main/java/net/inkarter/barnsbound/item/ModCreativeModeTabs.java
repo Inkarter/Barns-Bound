@@ -37,7 +37,25 @@ public class ModCreativeModeTabs
                         pOutput.accept(ModItems.FROSTFIRE_ICE);
 
                         pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
+
+
+
+                    })
+                    .build());
+    public static final Supplier<CreativeModeTab> BARNS_BOUND =
+            CREATIVE_MODE_TABS.register("barns_bound_tab", () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.barnsbound.barns_bound_tab"))
+                    .icon(() -> new ItemStack(ModItems.WHITE_CHICKEN_SPAWN_EGG.get()))
+                    .displayItems((pParameters, pOutput) -> {
+
                         pOutput.accept(ModItems.WHITE_CHICKEN_SPAWN_EGG);
+                        pOutput.accept(ModItems.WHITE_ROOSTER_SPAWN_EGG);
+                        pOutput.accept(ModItems.WHITE_CHICK_SPAWN_EGG);
+                        pOutput.accept(ModItems.COW_DAIRY_BLACK_SPAWN_EGG);
+
+                        pOutput.accept(ModItems.SMALL_EGG);
+                        pOutput.accept(ModItems.MEDIUM_EGG);
+                        pOutput.accept(ModItems.LARGE_EGG);
 
 
                     })

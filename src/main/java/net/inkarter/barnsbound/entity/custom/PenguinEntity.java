@@ -1,12 +1,17 @@
 package net.inkarter.barnsbound.entity.custom;
 
 import net.inkarter.barnsbound.entity.ModEntities;
+import net.inkarter.barnsbound.entity.client.PenguinVariant;
 import net.inkarter.barnsbound.item.ModItems;
+import net.minecraft.Util;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -15,10 +20,14 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 import org.jetbrains.annotations.Nullable;
 
 public class PenguinEntity extends Animal
 {
+    private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(PenguinEntity.class, EntityDataSerializers.INT); //for variant
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -82,5 +91,52 @@ public class PenguinEntity extends Animal
         {
             this.setupAnimationStates();
         }
+    }
+    /*
+    VARIANT AREA
+    V
+    V
+     */
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder)
+    {
+        super.defineSynchedData(builder);
+        builder.define(VARIANT, 0);
+
+    }
+    private int getTypeVariant(){
+        return this.entityData.get(VARIANT);
+
+    }
+    public PenguinVariant getVariant()
+    {
+        return PenguinVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private void setVariant(PenguinVariant variant){
+        this.entityData.set(VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag compound)
+    {
+        super.addAdditionalSaveData(compound);
+        compound.putInt("Variant", this.getTypeVariant());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag compound)
+    {
+        super.readAdditionalSaveData(compound);
+        this.entityData.set(VARIANT, compound.getInt("Variant"));
+    }
+
+    @Override
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType,
+                                        @Nullable SpawnGroupData spawnGroupData) {
+        PenguinVariant variant = Util.getRandom(PenguinVariant.values(), this.random);
+        this.setVariant(variant);
+        return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
 }

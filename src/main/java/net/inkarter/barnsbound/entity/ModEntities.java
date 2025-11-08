@@ -2,6 +2,7 @@ package net.inkarter.barnsbound.entity;
 
 import net.inkarter.barnsbound.BarnsBoundMod;
 import net.inkarter.barnsbound.entity.custom.ChickenEntity;
+import net.inkarter.barnsbound.entity.custom.CowEntity;
 import net.inkarter.barnsbound.entity.custom.PenguinEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -23,6 +24,10 @@ public class ModEntities
     public static final Supplier<EntityType<ChickenEntity>> CHICKEN_WHITE =
             ENTITY_TYPES.register("chicken_white", () -> EntityType.Builder.of(ChickenEntity::new, MobCategory.CREATURE)
             .sized(0.75f, 0.95f).build("chicken_white"));
+
+    public static final Supplier<EntityType<CowEntity>> COW_DAIRY_BLACK =
+            ENTITY_TYPES.register("cow_dairy_black", () -> EntityType.Builder.of(CowEntity::new, MobCategory.CREATURE)
+            .sized(0.75f, 0.95f).build("cow_dairy_black"));
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

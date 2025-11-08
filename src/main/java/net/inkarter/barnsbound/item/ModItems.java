@@ -20,6 +20,12 @@ public class ModItems
 {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BarnsBoundMod.MOD_ID);
 
+
+    public static final DeferredItem<Item> SMALL_EGG = ITEMS.registerSimpleItem("small_egg");
+    public static final DeferredItem<Item> MEDIUM_EGG = ITEMS.registerSimpleItem("medium_egg");
+    public static final DeferredItem<Item> LARGE_EGG = ITEMS.registerSimpleItem("large_egg");
+
+
     public static final DeferredItem<Item> BLACK_OPAL = ITEMS.registerSimpleItem("black_opal");
     public static final DeferredItem<Item> RAW_BLACK_OPAL =
             ITEMS.registerItem("raw_black_opal", Item::new, new Item.Properties());
@@ -44,7 +50,16 @@ public class ModItems
             () -> new DeferredSpawnEggItem(ModEntities.PENGUIN, 0xdebd47, 0xccbfbe, //hex colors
                     new Item.Properties()));
     public static final DeferredItem<Item> WHITE_CHICKEN_SPAWN_EGG = ITEMS.register("white_chicken_spawn_egg",
-            () -> new DeferredSpawnEggItem(ModEntities.CHICKEN_WHITE, 0xdebd47, 0xccbfbe, //hex colors
+            () -> new DeferredSpawnEggItem(ModEntities.CHICKEN_WHITE,0xffffff ,0xff0000 ,  //hex colors
+                    new Item.Properties()));
+    public static final DeferredItem<Item> WHITE_ROOSTER_SPAWN_EGG = ITEMS.register("white_rooster_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.CHICKEN_WHITE,0xffffff ,0xff0000 ,  //hex colors
+                    new Item.Properties()));
+    public static final DeferredItem<Item> WHITE_CHICK_SPAWN_EGG = ITEMS.register("white_chick_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.CHICKEN_WHITE,0xffffff ,0xff0000 ,  //hex colors
+                    new Item.Properties()));
+    public static final DeferredItem<Item> COW_DAIRY_BLACK_SPAWN_EGG = ITEMS.register("cow_dairy_black_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.COW_DAIRY_BLACK,0xffffff ,0x000000 ,  //hex colors
                     new Item.Properties()));
 
 

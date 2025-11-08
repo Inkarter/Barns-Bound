@@ -7,9 +7,21 @@
 
   "item.barnsbound.penguin_spawn_egg": "Penguin Spawn Egg",
   "item.barnsbound.white_chicken_spawn_egg": "White Chicken Spawn Egg",
+  "item.barnsbound.white_rooster_spawn_egg": "White Rooster Spawn Egg",
+  "item.barnsbound.white_chick_spawn_egg": "White Chick Spawn Egg",
+  "item.barnsbound.cow_dairy_black_spawn_egg": "Cow Dairy Black Spawn Egg",
+
+  "item.barnsbound.small_egg": "Small Egg",
+  "item.barnsbound.medium_egg": "Medium Egg",
+  "item.barnsbound.large_egg": "Large Egg",
+
+
+
+
 
   "itemGroup.barnsbound.black_opal_items_tab": "Black Opal Items",
   "itemGroup.barnsbound.black_opal_blocks_tab": "Black Opal Blocks",
+  "itemGroup.barnsbound.barns_bound_tab": "Barns Bound",
 
   "block.barnsbound.black_opal_block": "Block of Black Opal",
   "block.barnsbound.raw_black_opal_block": "Raw Black Opal Block",

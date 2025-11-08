@@ -8,5 +8,7 @@ public class ModModelLayer {
     public static final ModelLayerLocation PENGUIN = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(BarnsBoundMod.MOD_ID, "penguin"), "main");
     public static final ModelLayerLocation CHICKEN_WHITE = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(BarnsBoundMod.MOD_ID, "chicken_white"), "main"); //way to register a model
+            ResourceLocation.fromNamespaceAndPath(BarnsBoundMod.MOD_ID, "chicken_white"), "main");
+    public static final ModelLayerLocation COW_DAIRY_BLACK = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(BarnsBoundMod.MOD_ID, "cow"), "main"); //way to register a model
 }

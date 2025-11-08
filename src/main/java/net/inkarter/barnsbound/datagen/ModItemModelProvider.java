@@ -22,6 +22,11 @@ public class ModItemModelProvider extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        basicItem(ModItems.SMALL_EGG.get());
+        basicItem(ModItems.MEDIUM_EGG.get());
+        basicItem(ModItems.LARGE_EGG.get());
+
+
         basicItem(ModItems.BLACK_OPAL.get());
         basicItem(ModItems.RAW_BLACK_OPAL.get());
         basicItem(ModItems.CHAISAW.get());
@@ -36,7 +41,13 @@ public class ModItemModelProvider extends ItemModelProvider
 
         basicItem(ModBlocks.BLACK_OPAL_DOOR.asItem());
 
+        basicItem(ModItems.WHITE_CHICKEN_SPAWN_EGG.get());
+        basicItem(ModItems.WHITE_ROOSTER_SPAWN_EGG.get());
+        basicItem(ModItems.WHITE_CHICK_SPAWN_EGG.get());
+        basicItem(ModItems.COW_DAIRY_BLACK_SPAWN_EGG.get());
+
         withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.COW_DAIRY_BLACK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.WHITE_CHICKEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
 

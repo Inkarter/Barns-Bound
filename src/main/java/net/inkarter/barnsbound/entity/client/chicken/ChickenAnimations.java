@@ -1,4 +1,4 @@
-package net.inkarter.barnsbound.entity.client;
+package net.inkarter.barnsbound.entity.client.chicken;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
